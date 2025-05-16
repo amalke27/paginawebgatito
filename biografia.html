@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<link rel="stylesheet" href="amal.css">
+<script>
+document.getElementById("demo").innerHTML = "script.js";
+</script>
+  <link rel="icon" type="image/x-icon" href="faviconcat.ico">
+  <title>Shana's World: La Vida de una Gata Fabulosa</title>
+</head>
+<body bgcolor="#ffe6f7"> 
+
+  <center>
+    <h1><font color="#d65cad">🐱 Shana's World: La Vida de una Gata Fabulosa 💐</font></h1>
+    <h3>Bienvenidos al mundo de Shana, la gata más coqueta y traviesa. ¡Aquí contaré mis aventuras! 💗</h3>
+    <img src="shana.png" alt="Mi gata Shana" width="250">
+  </center>
+  <center>
+    <h2>📸 Galería de Fotos</h2>
+    <p>Aquí puedes ver algunas fotos de Shana:</p>
+    <img src="shana1.jpg" alt="Shana Foto 1" width="300">
+    <img src="shana2.jpg" alt="Shana Foto 2" width="300">
+    <img src="shana3.jpg" alt="Shana Foto 3" width="300">
+    <br><br>
+  </center>
+  <center>
+    <article>
+    <center>
+        <h2>🐾 Nombre</h2>
+        <p>Shana</p>
+
+        <h2>📅 Edad</h2>
+        <p>9 años</p>
+
+        <h2>😸 Personalidad</h2>
+        <p>Soy una gata muy coqueta, traviesa y dormilona. Me gusta que me mimen, pero solo cuando yo quiero.</p>
+
+        <h2>🎮 Hobbies</h2>
+        <ul>
+          <li>Mirar pájaros desde la ventana.</li>
+          <li>Robar la leche de los cereales de mi humana.</li>
+          <li>Dormir todo el día.</li>
+          <li>Pedir comida aunque su plato esté lleno.</li>
+        </ul>
+        <h2>👑 Fun Fact</h2>
+        <p>Shana no camina, desfila. No mira, juzga. No vive, reina. 👸🐱</p>
+    </center>
+  </article>
+  </center>
+  <center>
+    <h2>🎥 Video juego</h2>
+    <p>¡Aquí puedes ver un video con el que me lo paso pipa!</p>
+     <iframe width="640" height="360"
+          src="https://www.youtube.com/embed/pqgo9bW7cmk"
+          title="Video de YouTube"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+     </iframe>
+    <br><br>
+  </center>
+
+
+<section class="geolocalizacion" style="text-align:center; padding:20px; border:1px solid #ccc; border-radius:10px;">
+    <h2>📍 ¿Dónde estás ahora?</h2>
+    <p>Haz clic en el botón para saber tu ubicación (solo si das permiso).</p>
+    <button onclick="getLocation()" style="padding:10px 20px; font-size:16px; cursor:pointer;">Obtener ubicación</button>
+    <p id="demo"></p>
+</section>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
+
+<section id="cuentame-sobre-tu-mascota">
+  <div class="form-card">
+    <h2>Cuéntame sobre tu mascota 🐾</h2>
+    <form action="gracias.html" method="GET">
+
+      <fieldset>
+        <legend>📋 DATOS PERSONALES</legend>
+
+        <label for="nombreUsuario">Nombre:</label>
+        <input type="text" id="nombreUsuario" name="nombreUsuario" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono">
+      </fieldset>
+
+      <fieldset>
+        <legend>🐶 DATOS DE LA MASCOTA</legend>
+
+        <label>Tipo de animal doméstico:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="tipoAnimal" value="Perro"> Perro</label>
+          <label><input type="checkbox" name="tipoAnimal" value="Gato"> Gato</label>
+          <label><input type="checkbox" name="tipoAnimal" value="Conejo"> Conejo</label>
+          <label><input type="checkbox" name="tipoAnimal" value="Pájaro"> Pájaro</label>
+          <label><input type="checkbox" name="tipoAnimal" value="Otro"> Otro</label>
+        </div>
+
+        <label for="nombreMascota">Nombre de la mascota:</label>
+        <input type="text" id="nombreMascota" name="nombreMascota" required>
+
+        <label for="edadMascota">Edad de la mascota:</label>
+        <input type="number" id="edadMascota" name="edadMascota" min="0">
+
+        <label for="juguete">Juguete favorito:</label>
+        <input type="text" id="juguete" name="juguete">
+
+        <label for="comida">Comida favorita:</label>
+        <input type="text" id="comida" name="comida">
+
+        <label for="pasatiempo">Pasatiempo favorito:</label>
+        <input type="text" id="pasatiempo" name="pasatiempo">
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+      <button type="button" onclick="alert('¡Gracias por contarnos sobre tu mascota!')">Mostrar mensaje</button>
+    </form>
+  </div>
+</section>
+
+
+</body>
+</html>

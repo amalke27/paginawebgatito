@@ -1,0 +1,113 @@
+body{
+  background-color: lightgreen;
+}
+article {
+  width: 50%;
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@media all and (min-width:700px){
+	body {
+		background-color: lightblue;
+        font-family: Arial, sans-serif;
+    }
+article {
+  width: 50%;
+  background: #47BEE8;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+}
+#cuentame-sobre-tu-mascota {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.form-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.form-card h2 {
+  text-align: center;
+  color: #d65cad;
+  margin-bottom: 20px;
+}
+
+form fieldset {
+  border: none;
+  margin-bottom: 25px;
+}
+
+form legend {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #d65cad;
+  outline: none;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #d65cad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #b8479e;
+}
+
+
+
+
